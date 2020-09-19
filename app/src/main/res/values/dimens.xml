@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calc_font_size">20sp</dimen>
+    <dimen name="cal_layout_side_padding">30dp</dimen>
+
+</resources>

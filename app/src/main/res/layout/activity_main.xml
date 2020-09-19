@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/RootLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/background_blue_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/GrandTotalTitleResultContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="Grand Total"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/GrandTotalResultTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="₹28,730"
+                android:textColor="@color/dark_grey"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:elevation="5dp"
+            android:background="@drawable/rounded_rectngle_stroke"
+            android:id="@+id/CalculationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="@dimen/cal_layout_side_padding"
+            android:paddingRight="@dimen/cal_layout_side_padding"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:stretchColumns="*">
+            <!--android:background="@color/green"-->
+
+            <TableRow
+                android:id="@+id/calc2000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_2000"
+                    android:gravity="center"
+                    android:text="2000"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/calc_input_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/calc500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_500"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_200"
+                    android:gravity="center"
+                    android:text="200"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_100"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_50"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_20"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_line_view"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp">
+                <!--android:background="@color/orange"-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/currency_bg_10"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/calc5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+                <!--android:background="@color/orange"-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/currency_bg_5"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/calc_font_size" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="×"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <EditText
+                    android:id="@+id/calc_input_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="@drawable/currency_input_bg"
+                    android:elevation="1dp"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/calc_font_size" />
+
+                <TextView
+                    android:id="@+id/calac_total_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="1,23,45,678"
+                    android:textSize="@dimen/calc_font_size" />
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_buttons_layout"
+            android:stretchColumns="*">
+            <TableRow>
+                <LinearLayout
+                    android:gravity="right">
+                    <ImageButton
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:background="@drawable/save_button"
+                        android:id="@+id/save_button"/>
+                </LinearLayout>
+                <LinearLayout>
+                    <ImageButton
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:background="@drawable/refresh_button"
+                        android:id="@+id/reload_button"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:id="@+id/date_on_screencap"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
