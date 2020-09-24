@@ -1,10 +1,13 @@
 package com.roshanshibu.grandtotal;
 
+import android.Manifest;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -145,13 +148,22 @@ public class MainActivity extends AppCompatActivity {
 
         screencap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                screendate.setVisibility(View.VISIBLE);
-                bottom_buttons_layout.setVisibility(View.GONE);
-                View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
-                store(getScreenShot(rootView), filename+".png");
-                Toast.makeText(MainActivity.this, "Screenshot saved!", Toast.LENGTH_SHORT).show();
-                screendate.setVisibility(View.INVISIBLE);
-                bottom_buttons_layout.setVisibility(View.VISIBLE);
+                //do this only if we have the permission to write to storage
+                //if we dont have it, as the user
+                if (isWriteStoragePermissionGranted()) {
+                    screendate.setVisibility(View.VISIBLE);
+                    bottom_buttons_layout.setVisibility(View.GONE);
+                    View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+                    store(getScreenShot(rootView), filename + ".png");
+                    Toast.makeText(MainActivity.this, "Screenshot saved!", Toast.LENGTH_SHORT).show();
+                    screendate.setVisibility(View.INVISIBLE);
+                    bottom_buttons_layout.setVisibility(View.VISIBLE);
+                }
+                //if permission is not available, then display a toast and ask
+                else {
+                    Toast.makeText(MainActivity.this, "Need storage permission to save a screenshot", Toast.LENGTH_SHORT).show();
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+                }
             }
         });
     }
@@ -179,6 +191,23 @@ public class MainActivity extends AppCompatActivity {
             fOut.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public  boolean isWriteStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                //Permission is granted
+                return true;
+            } else {
+                //Permission is revoked
+                return false;
+            }
+        }
+        else {
+            //permission is automatically granted on sdk<23 upon installation
+            return true;
         }
     }
 

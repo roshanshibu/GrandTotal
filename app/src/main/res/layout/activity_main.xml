@@ -98,6 +98,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -150,6 +151,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -201,6 +203,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -252,6 +255,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -303,6 +307,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -354,6 +359,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -405,6 +411,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
@@ -460,6 +467,7 @@
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:maxLength="5"
                     android:textAlignment="viewEnd"
                     android:textSize="@dimen/calc_font_size" />
 
